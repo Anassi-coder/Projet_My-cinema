@@ -7,7 +7,6 @@
 ## Aperçu du projet 
 
 ![Capture d'écran](frontend/images/accueil.png)
-![Capture d'écran](frontend/images/ajout.png)
 
 Ce projet est une application de gestion de cinéma (Films, Salles et Séances) développée en PHP (architecture MVC simplifiée) et JavaScript Vanilla.
 
