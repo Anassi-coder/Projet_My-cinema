@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <title>My Cinema</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/Styles.css">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark p-2 shadow fixed-top d-md-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-brand fs-6 ms-2">MY CINEMA</span>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu"
+                class="col-md-3 col-lg-2 d-md-block sidebar collapse p-3 min-vh-100 sticky-top">
+                <h3 class="fw-bold mb-4 d-none d-md-block">MY CINEMA</h3>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="showSection('movies')">
+                            <i class="fas fa-video me-2"></i> Films
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('rooms')">
+                            <i class="fas fa-door-open me-2"></i> Salles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('shows')">
+                            <i class="fas fa-calendar-alt me-2"></i> Séances
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4 pt-5 pt-md-4">
+                
+                <div id="alert-container"></div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4 mt-2">
+                    <h1 class="h2" id="section-title">Gestion des Films</h1>
+                    <button class="btn shadow-sm rounded-0 new" onclick="openModal()">
+                        <i class="fas fa-plus"></i> Nouveau
+                    </button>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card card-stat p-3 rounded-0 mb-3 mb-md-0">
+                            <small class="text-muted uppercase fw-bold">Films au catalogue</small>
+                            <h3 id="stat-movies-count">0</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-stat p-3 rounded-0 mb-3 mb-md-0">
+                            <small class="text-muted uppercase fw-bold">Salles disponibles</small>
+                            <h3 id="stat-rooms-count">0</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-stat p-3 rounded-0">
+                            <small class="text-muted uppercase fw-bold">Séances prévues</small>
+                            <h3 id="stat-shows-count">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light">
+                                <tr id="table-head-row">
+                                    <th>Titre</th>
+                                    <th>Genre</th>
+                                    <th>Durée</th>
+                                    <th class="text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="main-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between bg-light align-items-center mt-3">
+                    <button id="prev-page" class="btn btn-outline-dark fw-bold rounded-0"
+                        onclick="changePage(-1)">Précédent</button>
+                    <span id="page-info" class="fw-bold">Page 1</span>
+                    <button id="next-page" class="btn btn-outline-dark fw-bold rounded-0"
+                        onclick="changePage(1)">Suivant</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="entityModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Ajouter un élément</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="entity-form">
+                    <div class="modal-body">
+                        <div id="form-fields" class="row g-3">
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-light rounded-0"
+                            data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-dark rounded-0">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+body { 
+    font-family: "Questrial";
+    background-image: url(images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sidebar {
+    min-height: 100vh;
+    color: whitesmoke;
+}
+
+.nav-link { 
+    color: whitesmoke; 
+}
+
+.nav-link:hover, .nav-link.active { 
+    color: #fff; 
+    background-color: #c53228; 
+}
+
+.h2 {
+    color: whitesmoke;
+}
+
+.new {
+    color: whitesmoke;
+    background-color: #c53228;
+    
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        z-index: 100;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: fixed;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 48px);
+        background-color: black !important;
+        z-index: 999;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #sidebarMenu {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1030;
+        background-color: #000000 !important; 
+    }
+}
