@@ -1,4 +1,13 @@
 # My Cinema - Gestion de Cinéma
+---
+
+##  Auteur
+- **Anass** - [@Anassi-coder](https://github.com/Anassi-coder)
+
+## Aperçu du projet 
+
+![Capture d'écran](frontend/images/accueil.png)
+![Capture d'écran](frontend/images/ajout.png)
 
 Ce projet est une application de gestion de cinéma (Films, Salles et Séances) développée en PHP (architecture MVC simplifiée) et JavaScript Vanilla.
 
@@ -6,7 +15,7 @@ Ce projet est une application de gestion de cinéma (Films, Salles et Séances) 
 
 1. **Cloner le projet** :
    ```bash
-   git clone [URL_DE_TON_REPO]
+   git clone [URL_DE_VOTRE_REPO]
 
 2. **Structure des dossiers** : Assurez-vous que les dossiers **backend/public/uploads* possèdent les droits d'écriture pour l'upload des affiches de films.
 
@@ -41,3 +50,7 @@ Pour des raisons de sécurité, le fichier contenant les identifiants réels de 
 3. Planning des séances avec détection automatique de conflits d'horaires.
 
 4. Suppression logique (Soft Delete) pour les séances.
+
+## Stack
+- **Backend :** PHP, MySQL
+- **Frontend :** HTML5, CSS3 (Bootstrap 5), JavaScript (Vanilla)
